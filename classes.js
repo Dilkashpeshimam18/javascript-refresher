@@ -1,15 +1,19 @@
 class Human{
-    constructor(g){
+    constructor(g,a){
         this.gender=g
+        this.age=a
     }
 
     printGender(){
         console.log(this.gender)
     }
+    printAge(){
+        console.log(this.age)
+    }
 }
 class Person extends Human{
-    constructor(g,n){
-        super(g)
+    constructor(g,a,n){
+        super(g,a)
         this.name=n
 
     }
@@ -19,6 +23,7 @@ class Person extends Human{
     }
 }
 
-let person=new Person('male','Max')
+let person=new Person('male',18,'Max',)
 person.printGender()
 person.print()
+person.printAge()
